@@ -1,7 +1,7 @@
 import { Field, InputType } from '@nestjs/graphql';
 
-function nestedDynamicInput() {
-  const clsName = 'NestedInputType';
+function dynamicInput() {
+  const clsName = 'DynamicInputType';
   const box = {
     [clsName]: class {},
   };
@@ -13,7 +13,7 @@ function nestedDynamicInput() {
 
 function DynamicInput() {
   return (prototype: any, property: string) => {
-    const inputType = nestedDynamicInput();
+    const inputType = dynamicInput();
     Field(() => inputType, { nullable: true })(prototype, property);
   };
 }
