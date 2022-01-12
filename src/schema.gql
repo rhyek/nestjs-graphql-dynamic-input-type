@@ -12,9 +12,9 @@ type Query {
 
 input QueryInput {
   param1: String!
-  nested: NestedInputType
+  nested: DynamicInputType
 }
 
-input NestedInputType {
+input DynamicInputType {
   param2: String!
 }
