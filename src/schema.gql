@@ -1,0 +1,15 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Item {
+  id: ID!
+}
+
+type Query {
+  items(query: QueryInput!): [Item!]!
+}
+
+input QueryInput {
+  param1: String!
+}
